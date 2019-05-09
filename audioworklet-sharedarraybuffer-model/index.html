@@ -2,7 +2,9 @@
 <html>
 
   <body>
-    <video id="video" src="./speech.mp4" controls></video>
+    <div>Video will appear after sound data is loaded.</div>
+    <video id="video" src="./speech.mp4" style='display: none' muted controls></video>
+    <div id='msg'>_</div>
     <div>
       <div>Data fetch delay</div>
       <input type="range" min="0" max="500" value="0" id='fetch-input'>

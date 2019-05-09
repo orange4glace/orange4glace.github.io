@@ -5,7 +5,7 @@ import {
   SlotLayout } from './common.js'
 
 
-const maxSlot = +sessionStorage.getItem('max-slot') || 64;
+const maxSlot = +sessionStorage.getItem('max-slot') || 8;
 const kernelsPerSlot = +sessionStorage.getItem('kernels-per-slot') || 8;
 
 Constants.MAX_SLOT = maxSlot;
@@ -56,6 +56,17 @@ class WorkletNode extends AudioWorkletNode {
       maxSlot: maxSlot,
       kernelsPerSlot: kernelsPerSlot
     })
+    this.worker.onmessage = e => {
+      const data = e.data;
+      if (data.message == 'SOUND_LOADED') {
+        const vid = document.getElementById('video');
+        vid.style.display = 'block';
+      }
+      if (data.message == 'MISS_TIMESLOT') {
+        const msg = document.getElementById('msg');
+        msg.innerHTML = 'Missed timeslot, frame = ' + data.frame;
+      }
+    }
 
     let reqID = 0;
     const vid = document.getElementById('video');
@@ -108,6 +119,7 @@ class WorkletNode extends AudioWorkletNode {
 
 const context = new AudioContext();
 const source = context.createBufferSource();
+console.log(context, context.audioWorklet)
 context.audioWorklet.addModule('./worklet.js').then(() => {
   const node = new WorkletNode(context);
   source.connect(node);

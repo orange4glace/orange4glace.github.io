@@ -27,8 +27,13 @@ async function loadSound() {
     oReq.onload = function(oEvent) {
       const arrayBuffer = oReq.response;
       const fab = new Float32Array(arrayBuffer);
+
+      self.postMessage({
+        message: 'SOUND_LOADED'
+      })
       resolve(fab);
     }
+    oReq.onerror = function(oEvent) { console.log(oEvent); }
     oReq.send();
   })
 }
@@ -154,6 +159,10 @@ async function __startWork(startTime, disposer) {
       currentSlotIndex += slotAdvance;
       lastFrameIndex += slotAdvance * Constants.FRAMES_PER_SLOT + Constants.FRAMES_PER_SLOT;
       console.warn('Timeslot missed',lastFrameIndex);
+      self.postMessage({
+        message: 'MISS_TIMESLOT',
+        frame: lastFrameIndex
+      })
     }
     else {
       // Got expected timeslot
@@ -193,6 +202,7 @@ async function __startWork(startTime, disposer) {
  * @param {Float32Array} outBuffer 
  */
 async function getData(startFrame, endFrame, outBuffer) {
+  if (!soundData) return;
   const soundDataView = new Float32Array(soundData.buffer, startFrame * 4, endFrame - startFrame);
   outBuffer.set(soundDataView);
 
