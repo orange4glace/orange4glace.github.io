@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+    <video id="video" src="./speech.mp4" controls></video>
+    <div>
+      <div>Data fetch delay</div>
+      <input type="range" min="0" max="500" value="0" id='fetch-input'>
+      <div id='fetch-label'>0ms</div>
+    </div>
+    <div>
+      <div>Burst lag frequency (when happen, data fetch delay will be multiplied by 3)</div>
+      <input type="range" min="0" max="1000" value="0" id='burst-input'>
+      <div id='burst-label'>0%</div>
+    </div>
+    <div>
+      <div>MAX_SLOT (reload required)</div>
+      <input id='max-slot'>
+    </div>
+    <div>
+      <div>KERNELS_PER_SLOT (reload required)</div>
+      <input id='kernels-per-slot'>
+    </div>
+    <div>
+      <button id='apply'>APPLY</button>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
+
+</html>
