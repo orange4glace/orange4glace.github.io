@@ -111,7 +111,7 @@ function getSlotData(slotIndex, outBuffer) {
   // const currentProducerCursorSlotOffset = currentProducerCursorSlotIndex % MAX_SLOT;
   const slotOffset = slotIndex % Constants.MAX_SLOT;
   // Try lock slot
-  if (Atomics.compareExchange(SAB.slotState, slotOffset, SlotState.IDLE)
+  if (Atomics.compareExchange(SAB.slotState, slotOffset, SlotState.IDLE, SlotState.BUSY)
       == SlotState.IDLE) {
     // Slot locked
     const slotView = getSlotBufferView(SAB.slotData, slotOffset);
