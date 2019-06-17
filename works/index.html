@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Resume - orange4glace</title>
+		<link rel='stylesheet' href='markdown.css'>
+		<style>
+			body {
+			    max-width: 1024px;
+    			margin: 0px auto;
+    			background: #f1f1f1;
+			}
+			#content {
+				background: white;
+				padding: 5px 16px;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content" class="markdown-body">
+		</div>
+		<script src='./showdown.min.js'></script>
+		<script>
+			let converter = new showdown.Converter();
+			let html = converter.makeHtml(`
+
+##Works
+
+### Gene Canvas
+
+* Gene analysis program based on HTML5 canvas
+
+* Load and display huge size of gene data (up to 1GB)
+
+* Zoom / Pan screen
+
+* Filter and sort data
+
+![genecanvas1](./genecanvas1.gif =600x317)
+
+![genecanvas2](./genecanvas2.gif =600x317)
+
+![genecanvas3](./genecanvas3.gif =600x317)
+
+### Gene Tree
+
+* Gene tree data viewer software run on Web, Windows, Mac OS (Hyrbrid web application)
+
+* Built on Electron framework
+
+* [Zoom, Pan, Rotate](./c_b_r/works/geneTree/2.JPG)
+
+* [Export to HD Image](./c_b_r/works/geneTree/3.JPG) (JPEG or TIFF, more than 10000 pixel * 10000 pixel, You may have to download link as a file to view since your browser may not handle to show such a huge image file.)
+
+![genom1](./genom1.gif =600x436)
+
+### Polygon Editor
+
+* Slideshow Objects (Polygon, Table, Chart, Textfield) editor
+
+* Angular 1 based, 2 way data binding.
+
+* Transform (with or without aspecting ratio), Rotation
+
+* Chart with 6 types (Clustered, Stacked, Line, Mountain)
+
+![poly1](./poly1.gif)
+
+### Skeletal Animation Editor
+
+* Personal project
+
+* My first web application (early 2013)
+
+* ProcessingJS
+
+* Skeletal Animation editing program
+
+* Adobe Flash style keyframe editor
+
+![skele1](./skele1.gif)
+
+### Video subtitler
+
+#### Subtitle Segmentator
+
+* Program for segmentating subtitles
+
+* Angular 1 based
+
+![subtitler1](./subtitler1.gif)
+
+#### Subtitle Translator
+
+* Program for translating subtitles
+
+* Angular 1 based
+
+![translator1](./translator1.gif)
+
+### Color subtitler
+
+* Subtitler which can subtitle the Color
+
+![color1](./color1.gif =600x434)
+![color2](./color2.gif =600x434)
+![color3](./color3.gif =600x434)
+![color4](./color4.gif =600x434)
+
+
+			`)
+			document.getElementById('content').innerHTML = html;
+		</script>
+	</body>
+</html>
