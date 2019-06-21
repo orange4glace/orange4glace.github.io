@@ -1,10 +1,4 @@
-import { 
-  Constants,
-  StateIndex,
-  SlotState,
-  SlotLayout,
-  getSlotBufferView } from './common.js'
-
+self.importScripts('./common.js')
 
 // The sound data, FLoat32ArrayBuffer
 let soundData = undefined;

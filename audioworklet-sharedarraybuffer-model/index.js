@@ -1,10 +1,3 @@
-import { 
-  Constants,
-  StateIndex,
-  SlotState,
-  SlotLayout } from './common.js'
-
-
 const maxSlot = +sessionStorage.getItem('max-slot') || 8;
 const kernelsPerSlot = +sessionStorage.getItem('kernels-per-slot') || 8;
 
@@ -26,9 +19,7 @@ class WorkletNode extends AudioWorkletNode {
     super(context, 'worklet-processor');
 
     // Worker backend
-    this.worker = new Worker('./worker.js', {
-      type: "module"
-    });
+    this.worker = new Worker('./worker.js');
 
     const stateBuffer = new SharedArrayBuffer(StateIndex.__SIZE * 4);
     const slotStateBuffer = new SharedArrayBuffer(Constants.MAX_SLOT * 4);
