@@ -121,7 +121,7 @@ var saveAs = saveAs
 				// this means `doc` and `save_link` are unusable and need to be recreated
 				// `view` is usable though:
 				doc = view.document;
-				save_link = doc.createElementNS("http://www.w3.org/1999/xhtml", "a");
+				save_link = doc.createElementNS("https://www.w3.org/1999/xhtml", "a");
 				save_link.href = object_url;
 				save_link.download = name;
 				var event = doc.createEvent("MouseEvents");
