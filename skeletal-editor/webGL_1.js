@@ -45,7 +45,7 @@ function jinit() {
 
 $(window).ready(function() {
 
-	if (!isChrome) alert("Chrome 브라우저에서만 지원합니다.");
+	// if (!isChrome) alert("Chrome 브라우저에서만 지원합니다.");
 
 	setTimeout("initProcessing()", 300);
 	
