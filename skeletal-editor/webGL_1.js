@@ -208,7 +208,7 @@ function jstartAnimation() {
 
 function jstopAnimation() {
 	$("#btn_toggleAnim").text("Start Animation");
-	ps.stopAnimation();
+	if (ps) ps.stopAnimation();
 	isRunning = false;
 }
 
