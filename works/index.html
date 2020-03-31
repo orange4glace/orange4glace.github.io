@@ -2,137 +2,298 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>Resume - orange4glace</title>
-		<link rel='stylesheet' href='markdown.css'>
-		<style>
-			body {
-			    max-width: 1024px;
-    			margin: 0px auto;
-    			background: #f1f1f1;
-			}
-			#content {
-				background: white;
-				padding: 5px 16px;
-				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-			}
-		</style>
+		<link rel='stylesheet' href='./style.css'>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 	</head>
 	<body>
-		<div id="content" class="markdown-body">
+		<div id="content">
+			<div class="box">
+				<div class="title">
+					<div class="label">Gene Canvas</div>
+					<div class="sub">Mid 2015</div>
+				</div>
+				<div class="tag-list">
+					<div class="tag">HTML5 Canvas</div>
+					<div class="tag">Data analytics</div>
+				</div>
+				<div class="description">
+					<p>Gene Canvas는 대용량의 유전자 데이터를 셀 구조로 시각화해주는 웹 어플리케이션입니다.</p>
+					<p>결과 필터링, 순서 변경등이 가능하며, HTML5 Canvas 2D Context를 이용하여 데이터를 렌더링합니다.</p>
+				</div>
+				<div class="swiper swiper-container">
+						<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./asset/genecanvas1.gif">
+								</div>
+								<div class="swiper-slide">
+									<img src="./asset/genecanvas2.gif">
+								</div>
+								<div class="swiper-slide">
+									<img src="./asset/genecanvas3.gif">
+								</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="title">
+					<div class="label">Epidemic Simulator</div>
+					<div class="sub">Early 2020</div>
+				</div>
+				<div class="tag-list">
+					<div class="tag">WebGL</div>
+					<div class="tag">Simulation</div>
+					<div class="tag">Optimization</div>
+				</div>
+				<div class="description">
+					<p>Epidemic Simulator는 3Blue1Brown의 <a target="_blank" href="https://www.youtube.com/watch?v=gxAaO2rsdIs">Simulating an epidemic</a> 영상에 영감을 받아 이틀에 걸쳐 제작한 토이 프로그램입니다.</p>
+					<p>SIR 모델을 기반으로 여러가지 전염병에 관련된 변수를 조작하여 전염병 확산 과정을 간단하게 시뮬레이션 해볼 수 있습니다.</p>
+					<p>WebGL 2.0이 사용되었으며, 대량의 데이터를 시뮬레이션하고 렌더링하기 위한 필수적인 최적화들이 포함되었습니다.</p>
+				</div>
+				<div class="swiper-container">
+						<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./asset/epidemic.gif">
+								</div>
+						</div>
+				</div>
+				<div class="repo-list">
+					<div class="repo">
+						<span class="label">Page</span>
+						<a target="_blank" href="https://orange4glace.github.io/epidemic-simulator/">https://orange4glace.github.io/epidemic-simulator</a>
+					</div>
+					<div class="repo">
+						<span class="label">Repo</span>
+						<a target="_blank" href="https://github.com/orange4glace/epidemic-simulator">https://github.com/orange4glace/epidemic-simulator</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="title">
+					<div class="label">Gene Tree</div>
+					<div class="sub">Early 2017</div>
+				</div>
+				<div class="tag-list">
+					<div class="tag">Electron</div>
+					<div class="tag">HTML5 Canvas</div>
+					<div class="tag">Data analytics</div>
+				</div>
+				<div class="description">
+					<p>Gene Tree는 유전자 데이터를 방사형 이진 트리 구조로 시각화해주는 웹 프로그램입니다.</p>
+					<p>Electron을 사용하였으며, 데이터 렌더링에는 HTML5 Canvas가 사용되었습니다.</p>
+					<p>확대/축소, 회전등이 가능하며, 보고있는 화면을 10,000x10,000 해상도 수준의 그림으로 저장할 수 있습니다.</p>
+				</div>
+				<div class="swiper swiper-container">
+						<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./asset/genom1.gif">
+								</div>
+								<div class="swiper-slide">
+									<img src="./asset/genom2.jpg">
+								</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="title">
+					<div class="label">Figure Module</div>
+					<div class="sub">Early 2016</div>
+				</div>
+				<div class="tag-list">
+					<div class="tag">HTML5 Canvas</div>
+					<div class="tag">AngularJS</div>
+				</div>
+				<div class="description">
+					<p>Figure Module은 PowerPoint에서 사용할 수 있는 차트, 테이블, 도형등을 웹에서 구현한 웹 모듈입니다.</p>
+					<p>각 요소들은 크기 조절 / 회전등이 가능합니다. 렌더링에는 HTML5 Canvas가 사용되었습니다.</p>
+					<p>AngularJS가 사용되어 양방향 데이터 바인딩이 가능합니다.</p>
+				</div>
+				<div class="swiper swiper-container">
+						<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./asset/poly2.gif">
+								</div>
+								<div class="swiper-slide">
+									<img src="./asset/poly1.gif">
+								</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="title">
+					<div class="label">Color Subtitler</div>
+					<div class="sub">Mid 2019</div>
+				</div>
+				<div class="tag-list">
+					<div class="tag">HTML5 Canvas</div>
+					<div class="tag">HTML5 Video</div>
+					<div class="tag">Editor</div>
+				</div>
+				<div class="description">
+					<p>Color Subtitler는 비디오 영상에 대한 색상 자막 구간을 편집할 수 있는 웹 어플리케이션입니다.</p>
+					<p>각 구간마다 단일 색상 또는 패턴 색상을 적용할 수 있습니다.</p>
+					<p>색상 구간은 그룹화가 가능하며, 그룹화된 구간은 프리셋으로 저장하여 사용할 수 있습니다.</p>
+					<p>복사, 붙여넣기, 실행 취소(Undo), 다시 실행(Redo)등의 기능을 제공합니다.</p>
+				</div>
+				<div class="swiper swiper-container">
+						<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./asset/color1.gif">
+								</div>
+								<div class="swiper-slide">
+									<img src="./asset/color2.gif">
+								</div>
+								<div class="swiper-slide">
+									<img src="./asset/color3.gif">
+								</div>
+								<div class="swiper-slide">
+									<img src="./asset/color4.gif">
+								</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="title">
+					<div class="label">Skeletal Editor</div>
+					<div class="sub">Early 2015</div>
+				</div>
+				<div class="tag-list">
+					<div class="tag">ProcessingJS</div>
+				</div>
+				<div class="description">
+					<p>Skeletal Editor는 키프레임 기반 Skeletal Animation을 만들 수 있는 웹 어플리케이션입니다.</p>
+					<p>렌더링에는 ProcessingJS가 사용되었으며, 데이터 내보내기, 불러오기 등이 가능합니다.</p>
+					<p>제 첫 웹 어플리케이션이기도 합니다.</p>
+				</div>
+				<div class="swiper swiper-container">
+						<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./asset/skele1.gif">
+								</div>
+								<div class="swiper-slide">
+									<img src="./asset/skele2.gif">
+								</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+				</div>
+				<div class="repo-list">
+					<div class="repo">
+						<span class="label">Page</span>
+						<a target="_blank" href="https://orange4glace.github.io/skeletal-editor">https://orange4glace.github.io/skeletal-editor</a>
+					</div>
+					<div class="repo">
+						<span class="label">Repo</span>
+						<a target="_blank" href="https://github.com/orange4glace/skeletal-editor">https://github.com/orange4glace/skeletal-editor</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="title">
+					<div class="label">Olive/Nlive</div>
+					<div class="sub">Mid 2019</div>
+				</div>
+				<div class="tag-list">
+					<div class="tag">Electron</div>
+					<div class="tag">WebGL</div>
+					<div class="tag">React</div>
+					<div class="tag">OffscreenCanvas</div>
+					<div class="tag">AudioWorklet</div>
+					<div class="tag">Node</div>
+					<div class="tag">FFMPEG</div>
+					<div class="tag">Qt</div>
+				</div>
+				<div class="description">
+					<p>Olive/Nlive는 Premiere Pro 스타일의 영상 편집 프로그램입니다.</p>
+					<p>개인 취미 프로젝트로 진행하였으며, 현재는 기본적임 타임라인 편집 / 영상 효과 / 영상 재생등의 기능을 제공합니다.</p>
+					<p>Olive는 Electron 을 기반으로 React / WebGL / OffscreenCanvas / AudioWorklet / FFEMPG 등</p>
+					<p>최신 웹 기술과 C++ 네이티브 모듈을 사용하여 구현한 버전이며,</p>
+					<p>Nlive는 같은 내용을 C++ Qt 기반으로 다시 구현한 버전입니다.</p>
+				</div>
+				<div class="swiper-container">
+						<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./asset/nlive.gif">
+								</div>
+						</div>
+				</div>
+				<div class="repo-list">
+					<div class="repo">
+						<span class="label">Repo</span>
+						<a target="_blank" href="https://github.com/orange4glace/nlive">https://github.com/orange4glace/nlive</a>
+					</div>
+					<div class="repo">
+						<span class="label">Repo</span>
+						<a target="_blank" href="https://github.com/orange4glace/olive">https://github.com/orange4glace/olive</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="title">
+					<div class="label">Subtitle Segmentator</div>
+					<div class="sub">Mid 2016</div>
+				</div>
+				<div class="tag-list">
+					<div class="tag">HTML5 Canvas</div>
+					<div class="tag">HTML5 Video</div>
+				</div>
+				<div class="description">
+					<p>Subtitle Segmentator는 비디오 영상에 입힐 자막 구간을 편집할 수 있는 웹 어플리케이션입니다.</p>
+				</div>
+				<div class="swiper-container">
+						<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./asset/subtitler1.gif">
+								</div>
+						</div>
+				</div>
+			</div>
 		</div>
-		<script src='./showdown.min.js'></script>
+		
+		<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 		<script>
-			let converter = new showdown.Converter();
-			let html = converter.makeHtml(`
 
-##Works
+			var mySwiper = new Swiper ('.swiper', {
+				// Optional parameters
+				direction: 'horizontal',
+				loop: true,
 
-### Gene Canvas
+				// If we need pagination
+				pagination: {
+					el: '.swiper-pagination',
+				},
+				autoplay: {
+					delay: 2500
+				},
 
-* Gene analysis program based on HTML5 canvas
-
-* Load and display huge size of gene data (up to 1GB)
-
-* Zoom / Pan screen
-
-* Filter and sort data
-
-![genecanvas1](./genecanvas1.gif =600x317)
-
-![genecanvas2](./genecanvas2.gif =600x317)
-
-![genecanvas3](./genecanvas3.gif =600x317)
-
------------------------------------
-
-### Gene Tree
-
-* Gene tree data viewer software run on Web, Windows, Mac OS (Hyrbrid web application)
-
-* Built on Electron framework
-
-* [Zoom, Pan, Rotate](./genom2.jpg)
-
-* [Export to HD Image](./genom3.jpg) (JPEG or TIFF, more than 10000 pixel * 10000 pixel, You may have to download link as a file to view since your browser may not handle to show such a huge image file.)
-
-![genom1](./genom1.gif =600x436)
-
------------------------------------
-
-### Polygon Editor
-
-* Slideshow Objects (Polygon, Table, Chart, Textfield) editor
-
-* Angular 1 based, 2 way data binding.
-
-* Transform (with or without aspecting ratio), Rotation
-
-* Chart with 6 types (Clustered, Stacked, Line, Mountain)
-
-![poly1](./poly1.gif)
-
------------------------------------
-
-### Skeletal Animation Editor
-
-* Personal project
-
-* My first web application (early 2013)
-
-* ProcessingJS
-
-* Skeletal Animation editing program
-
-* Adobe Flash style keyframe editor
-
-![skele1](./skele1.gif)
-
------------------------------------
-
-### Subtitle Segmentator
-
-* Program for segmentating subtitles
-
-* Angular 1 based
-
-![subtitler1](./subtitler1.gif)
-
------------------------------------
-
-### Subtitle Translator
-
-* Program for translating subtitles
-
-* Angular 1 based
-
-![translator1](./translator1.gif)
-
------------------------------------
-
-### Color subtitler
-
-* Subtitler which can subtitle the Color
-
-![color1](./color1.gif =600x434)
-![color2](./color2.gif =600x434)
-![color3](./color3.gif =600x434)
-![color4](./color4.gif =600x434)
-
------------------------------------
-
-### [Nlive](https://github.com/orange4glace/nlive)
-
-* Non-LInear Video Editor
-
-* C++ Qt
-
-* [Opensource](https://github.com/orange4glace/nlive), inprogress
-
-![nlive](./nlive.gif =600x434)
-
-
-			`)
-			document.getElementById('content').innerHTML = html;
+				// Navigation arrows
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				}
+			})
 		</script>
+		
 	</body>
 </html>
