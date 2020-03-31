@@ -706,6 +706,6 @@ function helpGone(help) {
 }
 
 setTimeout(() => {
-	load(getExample2(), 1);
+	load(getExample2(), 1000);
 	getAnimation('test2');
 }, 500);
