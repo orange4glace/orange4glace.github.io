@@ -25,7 +25,15 @@ var jCOLOR_HASFRAME = "#5CB3FF";
 
 function initProcessing() {
 	ps = Processing.getInstanceById("canvas");
-	if (ps) jlog("Initialized!");
+	if (ps) {
+		jlog("Initialized!");
+
+		setTimeout(() => {
+			load(getExample2(), true);
+			getAnimation('test2');
+		}, 1000);
+
+	}
 	else jlog("Fail to initialize..");
 }
 
@@ -704,8 +712,3 @@ function helpDisappear(help) {
 function helpGone(help) {
 	help.css("display", "none");
 }
-
-setTimeout(() => {
-	load(getExample2(), 4000);
-	getAnimation('test2');
-}, 4000);
