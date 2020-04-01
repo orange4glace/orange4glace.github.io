@@ -708,4 +708,4 @@ function helpGone(help) {
 setTimeout(() => {
 	load(getExample2(), 4000);
 	getAnimation('test2');
-}, 500);
+}, 4000);
