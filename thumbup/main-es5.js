@@ -897,7 +897,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           ctx.fillStyle = 'white';
           ctx.fillRect(0, 0, cvs.width, cvs.height);
 
-          for (var i = 0; i < this.drawingComponents.length; i++) {
+          for (var i = this.drawingComponents.length - 1; i >= 0; i--) {
             var drawingComponent = this.drawingComponents[i];
             var movable = drawingComponent.movableComponent.movable;
             tmpCvs.width = movable.w;
