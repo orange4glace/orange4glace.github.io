@@ -129,10 +129,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_components_control_filter_color_filter_control__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! src/app/components/control/filter/color-filter-control */ "./src/app/components/control/filter/color-filter-control.ts");
 /* harmony import */ var ngx_color_picker__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ngx-color-picker */ "./node_modules/ngx-color-picker/__ivy_ngcc__/fesm2015/ngx-color-picker.js");
 /* harmony import */ var src_app_components_control_image_drawing_image_drawing_control_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! src/app/components/control/image-drawing/image-drawing-control.component */ "./src/app/components/control/image-drawing/image-drawing-control.component.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/cdk/bidi */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/bidi.js");
-/* harmony import */ var _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/cdk/text-field */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/text-field.js");
-/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_service_keybinding_service__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! src/app/service/keybinding.service */ "./src/app/service/keybinding.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/cdk/bidi */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/bidi.js");
+/* harmony import */ var _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/cdk/text-field */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/text-field.js");
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+
 
 
 
@@ -182,6 +184,7 @@ class AppModule {
 }
 AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]] });
 AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [
+        src_app_service_keybinding_service__WEBPACK_IMPORTED_MODULE_29__["KeybindingService"],
         src_app_service_canvas_service__WEBPACK_IMPORTED_MODULE_5__["CanvasService"],
         src_app_components_canvas_canvas_component_service__WEBPACK_IMPORTED_MODULE_20__["CanvasComponentService"]
     ], imports: [[
@@ -258,13 +261,14 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     ngx_color_picker__WEBPACK_IMPORTED_MODULE_27__["ColorPickerModule"]
                 ],
                 providers: [
+                    src_app_service_keybinding_service__WEBPACK_IMPORTED_MODULE_29__["KeybindingService"],
                     src_app_service_canvas_service__WEBPACK_IMPORTED_MODULE_5__["CanvasService"],
                     src_app_components_canvas_canvas_component_service__WEBPACK_IMPORTED_MODULE_20__["CanvasComponentService"]
                 ],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
             }]
     }], null, null); })();
-_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetComponentScope"](src_app_components_image_drawing_image_drawing_component__WEBPACK_IMPORTED_MODULE_6__["ImageDrawingComponent"], [_angular_common__WEBPACK_IMPORTED_MODULE_29__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgComponentOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgTemplateOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgSwitchCase"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgSwitchDefault"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgPlural"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgPluralCase"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_forms_forms_x"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RangeValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["SelectMultipleControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RadioControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["MinLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["MaxLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["PatternValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["CheckboxRequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["EmailValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgModelGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgForm"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortal"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortalOutlet"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["TemplatePortalDirective"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["PortalHostDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatError"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatHint"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatLabel"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatPlaceholder"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatPrefix"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatSuffix"], _angular_material_button__WEBPACK_IMPORTED_MODULE_11__["MatButton"], _angular_material_button__WEBPACK_IMPORTED_MODULE_11__["MatAnchor"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_30__["Dir"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_12__["MatDivider"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardTitleGroup"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardContent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardActions"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardFooter"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardSmImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardMdImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardLgImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardXlImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardAvatar"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_31__["CdkAutofill"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_31__["CdkTextareaAutosize"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatInput"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatTextareaAutosize"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_14__["MatSlider"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelect"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectTrigger"], _angular_material_core__WEBPACK_IMPORTED_MODULE_32__["MatOption"], _angular_material_core__WEBPACK_IMPORTED_MODULE_32__["MatOptgroup"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__["MatCheckbox"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__["MatCheckboxRequiredValidator"], ngx_color_picker__WEBPACK_IMPORTED_MODULE_27__["ColorPickerDirective"], _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetComponentScope"](src_app_components_image_drawing_image_drawing_component__WEBPACK_IMPORTED_MODULE_6__["ImageDrawingComponent"], [_angular_common__WEBPACK_IMPORTED_MODULE_30__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgComponentOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgTemplateOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgSwitchCase"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgSwitchDefault"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgPlural"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgPluralCase"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_forms_forms_x"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RangeValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["SelectMultipleControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RadioControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["MinLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["MaxLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["PatternValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["CheckboxRequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["EmailValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgModelGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgForm"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortal"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortalOutlet"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["TemplatePortalDirective"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["PortalHostDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatError"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatHint"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatLabel"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatPlaceholder"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatPrefix"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatSuffix"], _angular_material_button__WEBPACK_IMPORTED_MODULE_11__["MatButton"], _angular_material_button__WEBPACK_IMPORTED_MODULE_11__["MatAnchor"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_31__["Dir"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_12__["MatDivider"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardTitleGroup"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardContent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardActions"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardFooter"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardSmImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardMdImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardLgImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardXlImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardAvatar"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_32__["CdkAutofill"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_32__["CdkTextareaAutosize"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatInput"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatTextareaAutosize"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_14__["MatSlider"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelect"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectTrigger"], _angular_material_core__WEBPACK_IMPORTED_MODULE_33__["MatOption"], _angular_material_core__WEBPACK_IMPORTED_MODULE_33__["MatOptgroup"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__["MatCheckbox"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__["MatCheckboxRequiredValidator"], ngx_color_picker__WEBPACK_IMPORTED_MODULE_27__["ColorPickerDirective"], _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
     src_app_components_control_control_pannel_component__WEBPACK_IMPORTED_MODULE_10__["ControlPannelComponent"],
     src_app_components_control_movable_movable_control_component__WEBPACK_IMPORTED_MODULE_21__["MovableControlComponent"],
     src_app_components_control_layer_layer_control_component__WEBPACK_IMPORTED_MODULE_22__["LayerControlComponent"],
@@ -276,8 +280,8 @@ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetComponentScope"](src_app_comp
     src_app_components_movable_movable_component__WEBPACK_IMPORTED_MODULE_4__["MovableComponent"],
     src_app_components_canvas_canvas_component__WEBPACK_IMPORTED_MODULE_7__["CanvasComponent"],
     src_app_components_image_drawing_image_drawing_component__WEBPACK_IMPORTED_MODULE_6__["ImageDrawingComponent"],
-    src_app_components_text_drawing_text_drawing_component__WEBPACK_IMPORTED_MODULE_8__["TextDrawingComponent"]], [_angular_common__WEBPACK_IMPORTED_MODULE_29__["AsyncPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["UpperCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["LowerCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["JsonPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["SlicePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["TitleCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["I18nPluralPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["I18nSelectPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["KeyValuePipe"]]);
-_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetComponentScope"](src_app_components_text_drawing_text_drawing_component__WEBPACK_IMPORTED_MODULE_8__["TextDrawingComponent"], [_angular_common__WEBPACK_IMPORTED_MODULE_29__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgComponentOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgTemplateOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgSwitchCase"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgSwitchDefault"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgPlural"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["NgPluralCase"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_forms_forms_x"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RangeValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["SelectMultipleControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RadioControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["MinLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["MaxLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["PatternValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["CheckboxRequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["EmailValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgModelGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgForm"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortal"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortalOutlet"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["TemplatePortalDirective"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["PortalHostDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatError"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatHint"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatLabel"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatPlaceholder"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatPrefix"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatSuffix"], _angular_material_button__WEBPACK_IMPORTED_MODULE_11__["MatButton"], _angular_material_button__WEBPACK_IMPORTED_MODULE_11__["MatAnchor"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_30__["Dir"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_12__["MatDivider"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardTitleGroup"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardContent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardActions"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardFooter"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardSmImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardMdImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardLgImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardXlImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardAvatar"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_31__["CdkAutofill"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_31__["CdkTextareaAutosize"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatInput"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatTextareaAutosize"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_14__["MatSlider"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelect"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectTrigger"], _angular_material_core__WEBPACK_IMPORTED_MODULE_32__["MatOption"], _angular_material_core__WEBPACK_IMPORTED_MODULE_32__["MatOptgroup"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__["MatCheckbox"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__["MatCheckboxRequiredValidator"], ngx_color_picker__WEBPACK_IMPORTED_MODULE_27__["ColorPickerDirective"], _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+    src_app_components_text_drawing_text_drawing_component__WEBPACK_IMPORTED_MODULE_8__["TextDrawingComponent"]], [_angular_common__WEBPACK_IMPORTED_MODULE_30__["AsyncPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["UpperCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["LowerCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["JsonPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["SlicePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["TitleCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["I18nPluralPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["I18nSelectPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["KeyValuePipe"]]);
+_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetComponentScope"](src_app_components_text_drawing_text_drawing_component__WEBPACK_IMPORTED_MODULE_8__["TextDrawingComponent"], [_angular_common__WEBPACK_IMPORTED_MODULE_30__["NgClass"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgComponentOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgTemplateOutlet"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgSwitchCase"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgSwitchDefault"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgPlural"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["NgPluralCase"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["ɵangular_packages_forms_forms_x"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RangeValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["SelectControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["SelectMultipleControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RadioControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["MinLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["MaxLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["PatternValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["CheckboxRequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["EmailValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgModelGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["NgForm"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortal"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["CdkPortalOutlet"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["TemplatePortalDirective"], _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_2__["PortalHostDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatError"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatHint"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatLabel"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatPlaceholder"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatPrefix"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_15__["MatSuffix"], _angular_material_button__WEBPACK_IMPORTED_MODULE_11__["MatButton"], _angular_material_button__WEBPACK_IMPORTED_MODULE_11__["MatAnchor"], _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_31__["Dir"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_12__["MatDivider"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardHeader"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardTitleGroup"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardContent"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardTitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardSubtitle"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardActions"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardFooter"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardSmImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardMdImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardLgImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardXlImage"], _angular_material_card__WEBPACK_IMPORTED_MODULE_13__["MatCardAvatar"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_32__["CdkAutofill"], _angular_cdk_text_field__WEBPACK_IMPORTED_MODULE_32__["CdkTextareaAutosize"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatInput"], _angular_material_input__WEBPACK_IMPORTED_MODULE_16__["MatTextareaAutosize"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_14__["MatSlider"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelect"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectTrigger"], _angular_material_core__WEBPACK_IMPORTED_MODULE_33__["MatOption"], _angular_material_core__WEBPACK_IMPORTED_MODULE_33__["MatOptgroup"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__["MatCheckbox"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_18__["MatCheckboxRequiredValidator"], ngx_color_picker__WEBPACK_IMPORTED_MODULE_27__["ColorPickerDirective"], _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
     src_app_components_control_control_pannel_component__WEBPACK_IMPORTED_MODULE_10__["ControlPannelComponent"],
     src_app_components_control_movable_movable_control_component__WEBPACK_IMPORTED_MODULE_21__["MovableControlComponent"],
     src_app_components_control_layer_layer_control_component__WEBPACK_IMPORTED_MODULE_22__["LayerControlComponent"],
@@ -289,7 +293,7 @@ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetComponentScope"](src_app_comp
     src_app_components_movable_movable_component__WEBPACK_IMPORTED_MODULE_4__["MovableComponent"],
     src_app_components_canvas_canvas_component__WEBPACK_IMPORTED_MODULE_7__["CanvasComponent"],
     src_app_components_image_drawing_image_drawing_component__WEBPACK_IMPORTED_MODULE_6__["ImageDrawingComponent"],
-    src_app_components_text_drawing_text_drawing_component__WEBPACK_IMPORTED_MODULE_8__["TextDrawingComponent"]], [_angular_common__WEBPACK_IMPORTED_MODULE_29__["AsyncPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["UpperCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["LowerCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["JsonPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["SlicePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["TitleCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["I18nPluralPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["I18nSelectPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_29__["KeyValuePipe"]]);
+    src_app_components_text_drawing_text_drawing_component__WEBPACK_IMPORTED_MODULE_8__["TextDrawingComponent"]], [_angular_common__WEBPACK_IMPORTED_MODULE_30__["AsyncPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["UpperCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["LowerCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["JsonPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["SlicePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["TitleCasePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["I18nPluralPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["I18nSelectPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_30__["KeyValuePipe"]]);
 
 
 /***/ }),
@@ -339,8 +343,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_components_text_drawing_text_drawing_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/components/text-drawing/text-drawing.component */ "./src/app/components/text-drawing/text-drawing.component.ts");
 /* harmony import */ var src_app_components_image_drawing_image_drawing_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/components/image-drawing/image-drawing.component */ "./src/app/components/image-drawing/image-drawing.component.ts");
 /* harmony import */ var src_app_util_vec2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/util/vec2 */ "./src/app/util/vec2.ts");
-/* harmony import */ var hotkeys_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! hotkeys-js */ "./node_modules/hotkeys-js/dist/hotkeys.esm.js");
-/* harmony import */ var src_app_components_canvas_canvas_component_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/components/canvas/canvas.component.service */ "./src/app/components/canvas/canvas.component.service.ts");
+/* harmony import */ var src_app_components_canvas_canvas_component_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/components/canvas/canvas.component.service */ "./src/app/components/canvas/canvas.component.service.ts");
+/* harmony import */ var src_app_service_keybinding_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/service/keybinding.service */ "./src/app/service/keybinding.service.ts");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
 
@@ -362,7 +366,7 @@ const _c1 = ["container"];
 const _c2 = ["canvas"];
 function CanvasComponent_ng_template_15_Template(rf, ctx) { }
 class CanvasComponent {
-    constructor(injector_, canvasComponentService_, commandService_, componentFactoryResolver_) {
+    constructor(injector_, canvasComponentService_, keybindingService_, commandService_, componentFactoryResolver_) {
         this.injector_ = injector_;
         this.canvasComponentService_ = canvasComponentService_;
         this.commandService_ = commandService_;
@@ -370,6 +374,7 @@ class CanvasComponent {
         this.subs_ = [];
         this.onDidChangeFocusedDrawing = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.onDidChangeCamera = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.keybindingDisposers_ = [];
         this.drawingComponents_ = [];
         this.drawingComponentRefs_ = [];
         this.focusedDrawing_ = null;
@@ -378,12 +383,26 @@ class CanvasComponent {
         this.cameraZoom_ = 1;
         this.canvasComponentService_.canvasComponent = this;
         this.moveCamera = this.moveCamera.bind(this);
-        Object(hotkeys_js__WEBPACK_IMPORTED_MODULE_9__["default"])('delete', () => {
+        this.keybindingDisposers_.push(keybindingService_.bind({
+            keychord: 'ctrl+z',
+            mac: 'command+z'
+        }, () => {
+            this.canvas.editStack.undo();
+        }));
+        this.keybindingDisposers_.push(keybindingService_.bind({
+            keychord: 'ctrl+y',
+            mac: 'command+y'
+        }, () => {
+            this.canvas.editStack.redo();
+        }));
+        this.keybindingDisposers_.push(keybindingService_.bind({
+            keychord: 'delete'
+        }, () => {
             if (!this.focusedDrawing)
                 return;
             this.commandService_.dispatch(new src_app_model_canvas__WEBPACK_IMPORTED_MODULE_2__["CanvasRemoveDrawingCommand"](this.canvas, this.focusedDrawing.drawing));
             this.commandService_.dispatch(new src_app_model_canvas__WEBPACK_IMPORTED_MODULE_2__["CanvasAddStackElementCommand"]());
-        });
+        }));
     }
     get drawingComponents() {
         return this.drawingComponents_;
@@ -410,6 +429,7 @@ class CanvasComponent {
     }
     ngOnDestroy() {
         this.subs_.forEach(sub => sub.unsubscribe());
+        this.keybindingDisposers_.forEach(disposer => disposer());
     }
     ngOnInit() {
         this.commandService_.canvas = this.canvas;
@@ -617,7 +637,7 @@ class CanvasComponent {
         return cvs.toDataURL('image/png', 1.0);
     }
 }
-CanvasComponent.ɵfac = function CanvasComponent_Factory(t) { return new (t || CanvasComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_components_canvas_canvas_component_service__WEBPACK_IMPORTED_MODULE_10__["CanvasComponentService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_service_command_service__WEBPACK_IMPORTED_MODULE_3__["ICommandService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"])); };
+CanvasComponent.ɵfac = function CanvasComponent_Factory(t) { return new (t || CanvasComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_components_canvas_canvas_component_service__WEBPACK_IMPORTED_MODULE_9__["CanvasComponentService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_service_keybinding_service__WEBPACK_IMPORTED_MODULE_10__["KeybindingService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_service_command_service__WEBPACK_IMPORTED_MODULE_3__["ICommandService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"])); };
 CanvasComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CanvasComponent, selectors: [["canvas-component"]], viewQuery: function CanvasComponent_Query(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, true, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstaticViewQuery"](_c1, true);
@@ -664,7 +684,7 @@ CanvasComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
                 templateUrl: './canvas.component.html',
                 styleUrls: ['./canvas.component.scss']
             }]
-    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"] }, { type: src_app_components_canvas_canvas_component_service__WEBPACK_IMPORTED_MODULE_10__["CanvasComponentService"] }, { type: src_app_service_command_service__WEBPACK_IMPORTED_MODULE_3__["CanvasCommandService"], decorators: [{
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"] }, { type: src_app_components_canvas_canvas_component_service__WEBPACK_IMPORTED_MODULE_9__["CanvasComponentService"] }, { type: src_app_service_keybinding_service__WEBPACK_IMPORTED_MODULE_10__["KeybindingService"] }, { type: src_app_service_command_service__WEBPACK_IMPORTED_MODULE_3__["CanvasCommandService"], decorators: [{
                 type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
                 args: [src_app_service_command_service__WEBPACK_IMPORTED_MODULE_3__["ICommandService"]]
             }] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"] }]; }, { canvas: [{
@@ -3259,19 +3279,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CanvasCommandService", function() { return CanvasCommandService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ICommandService", function() { return ICommandService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var hotkeys_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! hotkeys-js */ "./node_modules/hotkeys-js/dist/hotkeys.esm.js");
-
 
 
 class CanvasCommandService {
-    constructor() {
-        Object(hotkeys_js__WEBPACK_IMPORTED_MODULE_1__["default"])('ctrl+z', () => {
-            this.canvas.editStack.undo();
-        });
-        Object(hotkeys_js__WEBPACK_IMPORTED_MODULE_1__["default"])('ctrl+y', () => {
-            this.canvas.editStack.redo();
-        });
-    }
     dispatch(command) {
         command.canvas = this.canvas;
         this.canvas.pushCommand(command);
@@ -3281,8 +3291,47 @@ CanvasCommandService.ɵfac = function CanvasCommandService_Factory(t) { return n
 CanvasCommandService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: CanvasCommandService, factory: CanvasCommandService.ɵfac });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CanvasCommandService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
-    }], function () { return []; }, null); })();
+    }], null, null); })();
 const ICommandService = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('CommandService');
+
+
+/***/ }),
+
+/***/ "./src/app/service/keybinding.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/service/keybinding.service.ts ***!
+  \***********************************************/
+/*! exports provided: KeybindingService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "KeybindingService", function() { return KeybindingService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var hotkeys_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! hotkeys-js */ "./node_modules/hotkeys-js/dist/hotkeys.esm.js");
+/* harmony import */ var src_app_util_platform__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/util/platform */ "./src/app/util/platform.ts");
+
+
+
+
+class KeybindingService {
+    bind(binding, func) {
+        let keychord = binding.keychord;
+        if (src_app_util_platform__WEBPACK_IMPORTED_MODULE_2__["isMacintosh"]) {
+            keychord = binding.mac || keychord;
+        }
+        const disposer = () => {
+            hotkeys_js__WEBPACK_IMPORTED_MODULE_1__["default"].unbind(keychord, func);
+        };
+        Object(hotkeys_js__WEBPACK_IMPORTED_MODULE_1__["default"])(keychord, func);
+        return disposer;
+    }
+}
+KeybindingService.ɵfac = function KeybindingService_Factory(t) { return new (t || KeybindingService)(); };
+KeybindingService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: KeybindingService, factory: KeybindingService.ɵfac });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](KeybindingService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+    }], null, null); })();
 
 
 /***/ }),
@@ -4511,6 +4560,189 @@ class mat4 {
     }
 }
 mat4.identity = new mat4().setIdentity();
+
+
+/***/ }),
+
+/***/ "./src/app/util/platform.ts":
+/*!**********************************!*\
+  !*** ./src/app/util/platform.ts ***!
+  \**********************************/
+/*! exports provided: PlatformToString, isWindows, isMacintosh, isLinux, isNative, isWeb, isIOS, platform, userAgent, isRootUser, language, Language, locale, translationsConfigFile, globals, setImmediate, OS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlatformToString", function() { return PlatformToString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isWindows", function() { return isWindows; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMacintosh", function() { return isMacintosh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isLinux", function() { return isLinux; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNative", function() { return isNative; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isWeb", function() { return isWeb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isIOS", function() { return isIOS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "platform", function() { return platform; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "userAgent", function() { return userAgent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isRootUser", function() { return isRootUser; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "language", function() { return language; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Language", function() { return Language; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "locale", function() { return locale; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "translationsConfigFile", function() { return translationsConfigFile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "globals", function() { return globals; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setImmediate", function() { return setImmediate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OS", function() { return OS; });
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+const LANGUAGE_DEFAULT = 'en';
+let _isWindows = false;
+let _isMacintosh = false;
+let _isLinux = false;
+let _isNative = false;
+let _isWeb = false;
+let _isIOS = false;
+let _locale = undefined;
+let _language = LANGUAGE_DEFAULT;
+let _translationsConfigFile = undefined;
+let _userAgent = undefined;
+const isElectronRenderer = (typeof process !== 'undefined' && typeof process.versions !== 'undefined' && typeof process.versions.electron !== 'undefined' && process.type === 'renderer');
+// OS detection
+if (typeof navigator === 'object' && !isElectronRenderer) {
+    _userAgent = navigator.userAgent;
+    _isWindows = _userAgent.indexOf('Windows') >= 0;
+    _isMacintosh = _userAgent.indexOf('Macintosh') >= 0;
+    _isIOS = _userAgent.indexOf('Macintosh') >= 0 && !!navigator.maxTouchPoints && navigator.maxTouchPoints > 0;
+    _isLinux = _userAgent.indexOf('Linux') >= 0;
+    _isWeb = true;
+    _locale = navigator.language;
+    _language = _locale;
+}
+else if (typeof process === 'object') {
+    _isWindows = (process.platform === 'win32');
+    _isMacintosh = (process.platform === 'darwin');
+    _isLinux = (process.platform === 'linux');
+    _locale = LANGUAGE_DEFAULT;
+    _language = LANGUAGE_DEFAULT;
+    const rawNlsConfig = process.env['VSCODE_NLS_CONFIG'];
+    if (rawNlsConfig) {
+        try {
+            const nlsConfig = JSON.parse(rawNlsConfig);
+            const resolved = nlsConfig.availableLanguages['*'];
+            _locale = nlsConfig.locale;
+            // VSCode's default language is 'en'
+            _language = resolved ? resolved : LANGUAGE_DEFAULT;
+            _translationsConfigFile = nlsConfig._translationsConfigFile;
+        }
+        catch (e) {
+        }
+    }
+    _isNative = true;
+}
+function PlatformToString(platform) {
+    switch (platform) {
+        case 0 /* Web */: return 'Web';
+        case 1 /* Mac */: return 'Mac';
+        case 2 /* Linux */: return 'Linux';
+        case 3 /* Windows */: return 'Windows';
+    }
+}
+let _platform = 0 /* Web */;
+if (_isMacintosh) {
+    _platform = 1 /* Mac */;
+}
+else if (_isWindows) {
+    _platform = 3 /* Windows */;
+}
+else if (_isLinux) {
+    _platform = 2 /* Linux */;
+}
+const isWindows = _isWindows;
+const isMacintosh = _isMacintosh;
+const isLinux = _isLinux;
+const isNative = _isNative;
+const isWeb = _isWeb;
+const isIOS = _isIOS;
+const platform = _platform;
+const userAgent = _userAgent;
+function isRootUser() {
+    return _isNative && !_isWindows && (process.getuid() === 0);
+}
+/**
+ * The language used for the user interface. The format of
+ * the string is all lower case (e.g. zh-tw for Traditional
+ * Chinese)
+ */
+const language = _language;
+var Language;
+(function (Language) {
+    function value() {
+        return language;
+    }
+    Language.value = value;
+    function isDefaultVariant() {
+        if (language.length === 2) {
+            return language === 'en';
+        }
+        else if (language.length >= 3) {
+            return language[0] === 'e' && language[1] === 'n' && language[2] === '-';
+        }
+        else {
+            return false;
+        }
+    }
+    Language.isDefaultVariant = isDefaultVariant;
+    function isDefault() {
+        return language === 'en';
+    }
+    Language.isDefault = isDefault;
+})(Language || (Language = {}));
+/**
+ * The OS locale or the locale specified by --locale. The format of
+ * the string is all lower case (e.g. zh-tw for Traditional
+ * Chinese). The UI is not necessarily shown in the provided locale.
+ */
+const locale = _locale;
+/**
+ * The translatios that are available through language packs.
+ */
+const translationsConfigFile = _translationsConfigFile;
+const _globals = (typeof self === 'object' ? self : typeof global === 'object' ? global : {});
+const globals = _globals;
+const setImmediate = (function defineSetImmediate() {
+    if (globals.setImmediate) {
+        return globals.setImmediate.bind(globals);
+    }
+    if (typeof globals.postMessage === 'function' && !globals.importScripts) {
+        let pending = [];
+        globals.addEventListener('message', (e) => {
+            if (e.data && e.data.vscodeSetImmediateId) {
+                for (let i = 0, len = pending.length; i < len; i++) {
+                    const candidate = pending[i];
+                    if (candidate.id === e.data.vscodeSetImmediateId) {
+                        pending.splice(i, 1);
+                        candidate.callback();
+                        return;
+                    }
+                }
+            }
+        });
+        let lastId = 0;
+        return (callback) => {
+            const myId = ++lastId;
+            pending.push({
+                id: myId,
+                callback: callback
+            });
+            globals.postMessage({ vscodeSetImmediateId: myId }, '*');
+        };
+    }
+    if (typeof process !== 'undefined' && typeof process.nextTick === 'function') {
+        return process.nextTick.bind(process);
+    }
+    const _promise = Promise.resolve();
+    return (callback) => _promise.then(callback);
+})();
+const OS = (_isMacintosh ? 2 /* Macintosh */ : (_isWindows ? 1 /* Windows */ : 3 /* Linux */));
 
 
 /***/ }),
