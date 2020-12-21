@@ -27,26 +27,36 @@ class WorkletNode extends AudioWorkletNode {
 
     const state = new Int32Array(stateBuffer);
 
-    this.port.postMessage({
-      message: 'INITIALIZE',
-      buffers: {
-        state: stateBuffer,
-        slotState: slotStateBuffer,
-        slotData: slotDataBuffer
-      },
-      maxSlot: maxSlot,
-      kernelsPerSlot: kernelsPerSlot
-    });
-    this.worker.postMessage({
-      message: 'INITIALIZE',
-      buffers: {
-        state: stateBuffer,
-        slotState: slotStateBuffer,
-        slotData: slotDataBuffer
-      },
-      maxSlot: maxSlot,
-      kernelsPerSlot: kernelsPerSlot
-    })
+    this.port.onmessage = e => {
+      const data = e.data;
+      if (data.message == 'INITIALIZE') {
+        console.log('[Main] Get worklet initalize', data);
+        const sampleRate = data.sampleRate;
+
+        this.port.postMessage({
+          message: 'INITIALIZE',
+          sampleRate: sampleRate,
+          buffers: {
+            state: stateBuffer,
+            slotState: slotStateBuffer,
+            slotData: slotDataBuffer
+          },
+          maxSlot: maxSlot,
+          kernelsPerSlot: kernelsPerSlot
+        });
+        this.worker.postMessage({
+          message: 'INITIALIZE',
+          sampleRate: sampleRate,
+          buffers: {
+            state: stateBuffer,
+            slotState: slotStateBuffer,
+            slotData: slotDataBuffer
+          },
+          maxSlot: maxSlot,
+          kernelsPerSlot: kernelsPerSlot
+        });
+      }
+    }
     this.worker.onmessage = e => {
       const data = e.data;
       if (data.message == 'SOUND_LOADED') {
@@ -108,12 +118,19 @@ class WorkletNode extends AudioWorkletNode {
   }
 }
 
-const context = new AudioContext();
-const source = context.createBufferSource();
-console.log(context, context.audioWorklet)
-context.audioWorklet.addModule('./worklet.js').then(() => {
-  const node = new WorkletNode(context);
-  source.connect(node);
-  node.connect(context.destination);
-  source.start();
-})
+function startme() {
+  console.log('Start');
+  document.getElementById('no-support').style.display = 'inherit';
+  if (typeof WorkletNode !== 'undefined') {
+    document.getElementById('no-support').style.display = 'none';
+  }
+  document.getElementById('container').style.display = 'inherit';
+  const context = new AudioContext();
+  const source = context.createBufferSource();
+  context.audioWorklet.addModule('./worklet.js').then(() => {
+    const node = new WorkletNode(context);
+    source.connect(node);
+    node.connect(context.destination);
+    source.start();
+  })
+}

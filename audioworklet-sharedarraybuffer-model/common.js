@@ -1,7 +1,7 @@
 (function() {
 
   const Constants = {
-    FREQUENCY: 48000,
+    FREQUENCY: 44100,
     MAX_SLOT: 64,
     BYTES_PER_FRAME: 4,
     FRAMES_PER_KERNEL: 128,

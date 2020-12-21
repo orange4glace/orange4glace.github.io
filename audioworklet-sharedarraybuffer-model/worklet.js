@@ -1,6 +1,6 @@
 /** common.js **/
 const Constants = {
-  FREQUENCY: 48000,
+  FREQUENCY: 44100,
   MAX_SLOT: 64,
   BYTES_PER_FRAME: 4,
   FRAMES_PER_KERNEL: 128,
@@ -74,19 +74,26 @@ const SAB = {
   slotData: undefined
 }
 
-
 class WorkletProcessor extends AudioWorkletProcessor {
 
   constructor() {
     super();
+    console.log('Sample rate', sampleRate);
+
+    this.port.postMessage({
+      message: 'INITIALIZE',
+      sampleRate: sampleRate
+    });
 
     this.port.onmessage = e => {
       const data = e.data;
       if (data.message == 'INITIALIZE') {
+        console.log('Initialize worklet', data);
         const buffers = data.buffers;
         SAB.state = new Int32Array(buffers.state);
         SAB.slotState = new Int32Array(buffers.slotState);
         SAB.slotData = buffers.slotData;
+        Constants.FREQUENCY = data.sampleRate;
         Constants.MAX_SLOT = data.maxSlot;
         Constants.KERNELS_PER_SLOT = data.kernelsPerSlot;
         Constants.apply();

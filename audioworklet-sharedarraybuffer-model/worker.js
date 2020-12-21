@@ -13,9 +13,18 @@ let currentRequestID = 0;
 let currentWork = undefined;
 
 async function loadSound() {
+  const sampleRate = Constants.FREQUENCY;
+  if (sampleRate != 48000 && sampleRate != 44100) {
+    throw new Error('Only 48000 or 44100 sample rate is supported. Current = ' + sampleRate);
+  }
   return new Promise(resolve => {
     const oReq = new XMLHttpRequest();
-    oReq.open('GET', './speech.raw', true);
+    if (sampleRate === 48000) {
+      oReq.open('GET', './speech_48000.raw', true);
+    }
+    else if (sampleRate === 44100) {
+      oReq.open('GET', './speech_44100.raw', true);
+    }
     oReq.responseType = 'arraybuffer';
 
     oReq.onload = function(oEvent) {
@@ -55,10 +64,12 @@ self.onmessage = e => {
 }
 
 async function initialize(data) {
+  console.log('Initialize worker', data);
   const buffers = data.buffers;
   SAB.state = new Int32Array(buffers.state);
   SAB.slotState = new Int32Array(buffers.slotState);
   SAB.slotData = buffers.slotData;
+  Constants.FREQUENCY = data.sampleRate;
   Constants.MAX_SLOT = data.maxSlot;
   Constants.KERNELS_PER_SLOT = data.kernelsPerSlot;
   Constants.apply();
@@ -124,8 +135,8 @@ async function __startWork(startTime, disposer) {
   startTime += dt;
   Atomics.sub(SAB.state, StateIndex.PRODUCER_OFFSET, startProducerOffset);
   currentSlotIndex -= startProducerOffset;
-  
   let lastFrameIndex = timeToFrame(startTime);
+  const x = Date.now();
 
   while (true) {
 
